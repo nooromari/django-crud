@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body class="bg-black text-center">
     <header>
-        <h1>Snacks</h1>
+        <h1 class="font-serif text-5xl p-10 text-blue-500">Snacks</h1>
         <nav>
-            <a href="{% url 'snack_list' %}">Snacks List</a>
-            <a href="{% url 'snack_create' %}">Add new snack</a>
+            <a href="{% url 'snack_list' %}" class="font-serif p-5 text-2xl text-blue-500 hover:text-blue-300">Snacks List</a>
+            <a href="{% url 'snack_create' %}" class="font-serif p-5 text-2xl text-blue-500 hover:text-blue-300">Add new snack</a>
         </nav>
     </header>
     <main>
@@ -19,8 +20,8 @@
 
      {% endblock %}   
     </main>
-    <footer>
+    <footer class="text-gray-300">
         Snacks &copy; 2021
-    </footer>
+    </footer >
 </body>
 </html>

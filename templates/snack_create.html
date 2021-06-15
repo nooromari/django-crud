@@ -2,9 +2,9 @@
 
 {% block content %}
     <h2>Add Snack:</h2>
-    <form action="" method="post">
+    <form action="" method="post" class="m-10 text-green-600">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Add">
+        <input type="submit" value="Add" class="font-serif px-5 text-2xl text-blue-500 hover:bg-green-200 m-10">
     </form>
 {% endblock content %}
