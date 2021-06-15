@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul class="list-disc list-inside text-gray-50 text-2xl m-10">
+    {% for snack in object_list %}
+        <li>
+            <a href="{% url 'snack_detail' snack.pk %}" class=" hover:text-red-200">{{ snack.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

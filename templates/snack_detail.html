@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2 class="text-green-300 text-2xl m-10">{{ snack.title }}</h2>
+    <ul class="text-green-200 m-10 list-disc list-inside">
+        <li>Purchaser: {{ snack.purchaser }}</li>
+        <li>Description: {{ snack.description }}</li>
+    </ul>
+    
+    <a href="{% url 'snack_update' snack.pk %}" class="text-blue-200 hover:text-red-300 text-2xl m-10">Update Snack</a>
+    <a href="{% url 'snack_delete' snack.pk %}" class="text-blue-200 hover:text-red-300 text-2xl">Delete Snack</a>
+{% endblock content %}
